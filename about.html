@@ -6,9 +6,15 @@
     <title>About</title>
 </head>
 <body data-barba="wrapper">
-    <h1>Barba JS change pages without reloare</h1>
-    <div id="app"  style="background-color:rgb(139, 36, 36)" data-barba="container" data-barba-namespace="about">
-      <a href="/index.html">Go to Home page</a>
+    <div class="bg-lime-50 w-fuil flex justify-between h-156" data-barba="container" data-barba-namespace="about">
+      <div class=" w-[50%] p-30 ">
+       <h1 class="text-4xl text-fuchsia-950 ">About Page</h1>
+      </div>
+      <div class=" w-[50%] relative ">
+        <div class=" absolute top-85 w-35 bg-blue-700 rotate-50 h-70 rounded-2xl left-40 "></div>
+        <img class="absolute top-0" src="/about.png" alt="">
+      </div>
+
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>

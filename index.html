@@ -5,10 +5,33 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
+    <link rel="stylesheet" href="home.css">
   </head>
-  <body data-barba="wrapper">
-    <div style="background-color: rgb(0, 184, 184);" id="app" data-barba="container" data-barba-namespace="home">
-      <a href="/about.html">Go to About page</a>
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <body class="bg-black" data-barba="wrapper">
+    <!-- NAVBAR -->
+    <nav  class="  bg-lime-50 justify-between flex  items-center  h-15 ">
+      <a class=" ml-10 text-shadow-black text-2xl " href="/index.html">Barba</a>
+      <ul class="flex justify-center items-center list-none text-shadow-black gap-8 px-4 h-full   ">
+        <a href="/about.html">Men</a>
+        <a href="/about.html">Women</a>
+        <a href="/about.html">Kids</a>
+        <a href="/about.html">About</a>
+        <div class="h-8 w-8 border-shadow-black border rounded-full"></div>
+      </ul>
+    </nav>
+
+    <!-- CONTAI9NER -->
+
+    <div class="flex  h-156 bg-lime-50 " data-barba="container" data-barba-namespace="home">
+     <!-- <h1 class="text-white">Home Pages </h1> -->
+     <div class="w-[50%]  p-10 ">
+      <span class=" text-2xl font-semibold text-fuchsia-800">Home Pages</span>
+     </div>
+     <div class=" z-9 relative px-20  w-[50%] flex justify-end">
+       <img class="absolute h-155 " src="/model.png" alt="">
+       <div class="w-50  bg-pink-500 "></div> 
+     </div>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>
