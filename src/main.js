@@ -4,27 +4,31 @@ import gsap from 'gsap';
 
 barba.init({
   transitions:[{
-    name:'first transition',
-    scync:true,
+    name:"curtain wiper",
     leave(data){
-      data.current.container.style.position = 'absolute';
-      return gsap.to(data.current.container, {
-        // opacity:0,
-        x: -1500,
-        duration:0.7,
-        ease:'power1.out'
+      return gsap.to(".curtain .strips",{
+        scaleY:1,
+        transformOrigin:"bottom",
+        duration:0.5,
+        stagger:{
+          each:0.09,
+          from:"random"
+        },
+        ease:"circ.inout",
       })
-      
     },
-    enter(data){
-      data.current.container.style.position = 'absolute';
-      return gsap.from(data.next.container, {
-        // opacity:0,
-        x: 1500,
-        duration:0.7,
-        ease:'power1.out'
+    after(data){
+      return gsap.to(".curtain .strips",{
+        scaleY:0,
+        transformOrigin:"top",
+        duration:0.5,
+        stagger:{
+          each:0.09,
+          from:"random"
+        },
+        ease:"circ.inOut"
       })
-
     }
+    
   }]
 })
